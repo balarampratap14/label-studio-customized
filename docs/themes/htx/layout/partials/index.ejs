@@ -1,0 +1,699 @@
+<style>
+ #main-screen {
+     display: flex;
+     justify-content: center;
+     align-items: center;
+ }
+
+ .ms-left {
+     position: relative;
+     padding-top: 60px;
+     padding-bottom: 100px;
+     margin-right: 1.9%;
+     width: 48%;
+ }
+ .ms-right {
+     width: auto;
+     padding: 0 4em;
+     padding-top: 1em;
+     background: rgb(250,250,250);
+     background: radial-gradient(circle, rgba(255,255,255,1) 0%, rgba(247,247,247,1) 100%);
+     border-radius: 10px;
+     border: 2px solid rgba(244, 138, 66, 0.75);
+     max-width: 500px;
+ }
+ 
+ .header-ul {
+     font-size: 1.2em;
+
+ }
+ .btn {
+     line-height: 1.5;
+     position: relative;
+     display: inline-block;
+     font-weight: 400;
+     white-space: nowrap;
+     text-align: center;
+     background-image: none;
+     border: 1px solid transparent;
+     -webkit-box-shadow: 0 2px 0 rgba(0, 0, 0, 0.015);
+     box-shadow: 0 2px 0 rgba(0, 0, 0, 0.015);
+     cursor: pointer;
+     -webkit-transition: all .3s cubic-bezier(.645, .045, .355, 1);
+     transition: all .3s cubic-bezier(.645, .045, .355, 1);
+     -webkit-user-select: none;
+     -moz-user-select: none;
+     -ms-user-select: none;
+     user-select: none;
+     -ms-touch-action: manipulation;
+     touch-action: manipulation;
+
+     padding: 10px 25px;
+     font-size: 14px;
+     font-weight: bold;
+     border-radius: 4px;
+     color: rgba(0, 0, 0, 0.65);
+
+     color: #fff;
+     background-color: #1890ff;
+     border-color: #1890ff;
+     text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.12);
+     -webkit-box-shadow: 0 2px 0 rgba(0, 0, 0, 0.045);
+     box-shadow: 0 2px 0 rgba(0, 0, 0, 0.045);
+     margin: 5px;
+     padding-top: 9px;
+ }
+
+ .btn-slack {
+     background-color: #5c175d;
+     border-color: #8b538c;
+ }
+
+ .underline {
+     color: #1890ff;
+ }
+
+ .btn-orange {
+     background-color: #f58a48;
+     border-color: #f58a48;
+ }
+
+ .code-block {
+     font-family: "Source Code Pro", monospace;
+     border: 1px solid #e1dddc;
+     background-color: #fbfbfb;
+     padding: 13px 17px;
+     color: #46659e;
+     margin-bottom: 40px;
+ }
+
+ .border-card {
+
+ }
+
+ .light-blue {
+     
+     background-repeat: no-repeat;
+     background-position: 20px 20px;
+     background-size: 47.7%;
+
+     background-color: #eff0f2;
+     
+ }
+
+ .quickstart-row {
+     display: flex;
+     justify-content: center;
+     padding-top: 100px;
+     padding-bottom: 100px;
+ }
+
+ .cards {
+     width: 100%;
+     display: flex;
+     padding-bottom: 100px;
+     justify-content: center;
+ }
+
+ .card {
+     padding: 1em;
+     background-color: #fff;
+     color: #444;
+     padding: 20px;
+     margin: 0 20px;
+     max-width: 350px;
+     padding: 35px 45px 60px 45px;
+     box-shadow: 0 4px 18px rgba(11,33,74,0.1), 0 -2px 4px rgba(11,33,74,0.03);
+ }
+
+ .card h3 {
+     font-size: 24px;
+ }
+ 
+ .img-car {
+     width: 740px;
+     filter: drop-shadow(0 0 10px #999);
+ }
+
+ .subscribe {
+     width: 600px;
+     text-align: center;
+     display: flex;
+     justify-content: center;
+     height: 400px;
+     align-items: center;
+     margin: 0 auto;
+ }
+
+ .tagline {
+     display: flex;
+ }
+
+ .images-carousel {
+     margin-right: 2em;
+ }
+
+ .quickstart {
+     margin-left: 4em;
+     margin-right: 2em;
+ }
+
+ .metrics {
+     display: flex;
+ }
+
+ .row {
+     display: flex;
+     flex-direction: row;
+     flex-wrap: wrap;
+     width: 100%;
+ }
+
+ .column {
+     display: flex;
+     flex-direction: column;
+     flex-basis: 100%;
+     flex: 1;
+ }
+
+ .blue-column {
+     background-color: blue;
+     height: 100px;
+ }
+
+ .green-column {
+     background-color: green;
+     height: 100px;
+ }
+
+ .frameworks {
+   display: flex;
+    justify-content: space-around;
+    max-width: 900px;
+ align-items: center;
+ margin: 4em auto;
+ 
+ }
+ 
+ @media screen and (max-width: 1000px) {
+
+     .header-ul {
+         padding-left: 0;
+     }
+
+     .quickstart {
+
+         margin-left: 2em;
+     }
+
+     .tagline-text {
+         text-align: center;
+     }
+
+     .tagline {
+         flex-direction: column;
+     }
+
+     .img-car {
+         width: 90%;
+         margin-left: 2em;
+     }
+
+     .subscribe {
+         width: auto;
+         margin-left: 2em;
+         margin-right: 2em;
+     }
+
+     .cards {
+         flex-direction: column;
+     }
+
+     .card {
+         margin-bottom: 2em;
+     }
+
+     .quickstart-row {
+         flex-direction: column;
+         padding-top: 60px;
+     }
+
+     .images-carousel {
+         margin: 0 auto;
+     }
+ }
+
+ .footer a, .footer h2 {
+     color: white;
+
+ }
+
+ .footer a:hover {
+     text-decoration: underline;
+ }
+
+ .footer {
+     background-color: #0f0f0f;
+     color: white;
+     display: flex;
+     justify-content: center;
+     min-height: 300px;
+     align-items: center;
+ }
+
+ .footer .item {
+     margin-right: 10px;
+     margin-left: 10px;
+     line-height: 1.8em;
+ }
+
+
+ img {
+     max-width: 100%;
+     vertical-align: middle;
+ }
+
+ .trigger {
+     display: none;
+ }
+
+ .slider {
+     position: relative;
+     height: 392px;
+     width: 760px;
+     margin-left: 2em;
+ }
+
+ .slider-wrapper {
+     position: relative;
+ }
+
+ .slide {
+     width: 100%;
+     overflow: hidden;
+     position: absolute;
+     height: 100%;
+     left: 0;
+     top: 0;
+     z-index: 5000;
+     opacity: 0;
+     transition: opacity .5s ease-in-out;
+     filter: drop-shadow(0 0 10px #999);
+     border-radius: 5px;
+ }
+
+ .slide-img {
+     height: 100%;
+     object-fit: fill;
+     display: block;
+     margin: 0 auto;
+     filter: drop-shadow(0 0 10px #999);
+ }
+
+ .slide-figure {
+     height: 100%;
+     position: relative;
+     margin: 0;
+ }
+
+ .slide-caption {
+     position: absolute;
+     bottom: 0%;
+     width: 100%;
+     color: white;
+     text-align: center;
+     background: rgba(0, 0, 0, 0.4);
+ }
+
+ .trigger:checked + .slide {
+     z-index: 6000;
+     opacity: 1;
+ }
+
+ .slider-nav {
+     width: 100%;
+     text-align: center;
+     margin: 1rem 0;
+     padding: 0px;
+ }
+
+ .slider-nav__item {
+     display: inline-block;
+ }
+
+ .slider-nav__label {
+     font-size: 13px;
+     background-color: #333;
+     display: block;
+     height: 1.5em;
+     line-height: 2em;
+     width: 1.5em;
+     text-align: center;
+     border-radius: 50%;
+     color: white;
+     cursor: pointer;
+     transition: background-color .25s, color .25s ease-in-out;
+ }
+
+ .slider-nav__label:hover,
+ .slider-nav__label:active,
+ .slider-nav__label:focus {
+     background-color: gray;
+     color: black;
+ }
+
+ #site_search {
+     margin-right: 0 !important;
+ }
+
+ @media screen and (max-width: 900px) {
+     #main-screen {
+         display: block;
+         margin-bottom: 4em;
+     }
+     .ms-left, .ms-right {
+         width: auto;
+         margin-left: 2em;
+         margin-right: 2em;
+         
+     }
+     .ms-right {
+        margin: 0 auto;
+     }
+     .ms-wrapper {
+       padding: 0 2em;
+     }
+     #site_search {
+         top: 5px !important;
+         margin-right: 5px !important;
+     }
+     #local-search-result-wrapper {
+         top: 40px;
+     }
+
+ .frameworks {
+         margin: 0 auto;
+         flex-direction: column;
+     }
+
+     .frameworks img {
+         margin-top: 2em;
+     }
+ 
+     .slider {
+         width: 90%;
+         margin-left: 2em;
+         margin-right: 2em;
+         height: 250px;
+     }
+
+     .slide-img {
+         width: 100%;
+         height: auto;
+     }
+
+     .slider-wrapper {
+         width: 100%;
+     }
+ }
+</style>
+
+
+<body>
+
+<%- partial('partials/header') %>
+
+<div id="local-search-result-wrapper"></div>
+<script>
+    var search_path = "<%= config.search.path %>";
+    if (search_path.length === 0) {
+        search_path = "search.xml";
+    }
+    var path = "<%= config.root %>" + search_path;
+    searchFunc(path, 'local-search-input', 'local-search-result-wrapper');
+</script>
+
+
+<div class="fix-sidebar">
+  <%- partial('partials/sidebar_main_page', {type: page.type === 'menu' ? 'guide' : page.type, index: page.index}) %>
+  <div>
+    <div id="bodybag" class='content'>
+    <section>
+        <div id="main-screen">
+
+        <div class="ms-left">
+          <div style="display: flex; justify-content: center;">
+            <div style="display: flex; flex-direction: column; align-items: center;">
+              <div class="tagline">
+
+                <div class="tagline-text">
+
+                  <h1 style="font-size: 48px; margin-top: 0.6em; text-align: center">Open Source<br/>Data Labeling Tool
+                  </h1>
+                </div>
+              </div>
+              <ul style="list-style-type: none;" class="header-ul">
+                <li>— Simplicity built-in, no overcomplicated UIs</li>
+                <li>— Supports different datatypes </li>
+                <li>— Visually configurable from top to the bottom</li>
+              </ul>
+              <div style="display: flex; flex-direction: row; margin-top: 2em;">
+                <center>
+                  <a href="https://app.labelstud.io/welcome?ref=labelstud.io" class="btn">Try Demo</a>
+                  <a href="<%- url_for("guide/") %>" class="btn">Get Started</a>
+                  <a href="https://join.slack.com/t/label-studio/shared_invite/zt-cr8b7ygm-6L45z7biEBw4HXa5A2b5pw" class="btn btn-slack">
+                    <img src="<%- url_for("/images/slack.png") %>" height="18" style="margin-right: 8px;"/>Join Slack</a>
+                </center>
+
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="ms-wrapper">
+          <div class="ms-right">
+              <div style="text-align: center;">
+                  <h3>Introducing version 0.8.0 - Time series is Everywhere!</h3>
+                  <p>Label data from sensors, devices, and more.
+                      <a href="/blog/release-080-time-series-labeling.html" class="underline">Read a note</a> in our blog.</p>
+                  <a href="/blog/release-080-time-series-labeling.html">
+                    <img src="/images/release-080/time-series-labeling-with-multiple-channels.png"
+                         style="max-height:280px; position:relative; top: 20px" />
+                    <img src="/images/opossum/other/opossum_looking.svg" width="70px" style="position: relative; top: -20px">
+                  </a>
+                  <div style="font-weight: lighter; position: relative; top: -10px">Last version is 0.8.0</div>
+              </div>
+          </div>
+        </div>
+
+        </div>
+      </section>
+
+        <section class="cards" style="padding-top: 50px; padding-bottom: 50px; background: #eff0f2; ">
+          <div style="max-width: 700px; text-align: center; margin: 0 auto;">
+          <h2>10000+ Users</h2>
+          <p>Data Scientists, Machine Learning Engineers, and aspiring developers are using Label Studio to produce innovative machine learning models for real-world applications.</p>
+          </div>
+        </section>
+        
+
+      <!-- <div style="padding-top: 100px; text-align: center"> -->
+      <!--     <h4>News: Introducing Label Studio 0.6.0 Nested labeling</h4> -->
+      <!--       <img src="http://localhost:4000/images/release-060/nested_labeling.gif" style="border: 1px solid #ccc; max-width: 500px" /> -->
+      <!--   </div> -->
+      
+      <section class="quickstart-row">
+
+        <div class="slider-wrapper">
+          <div class="slider">
+            <input type="radio" name="slider" class="trigger" id="zero" checked="checked"/>
+            <!-- GIF -->
+            <div class="slide">
+              <figure class="slide-figure">
+                <img class="slide-img" src="/images/annotation_examples.gif" style="border-radius: 5px;"/>
+              </figure>
+            </div>
+
+            <!-- Images -->
+            <input type="radio" name="slider" class="trigger" id="one"/>
+            <div class="slide">
+              <figure class="slide-figure">
+                <img class="slide-img" src="/images/screens/image_bbox.png"/>
+                <figcaption class="slide-caption"><p>Image Bounding Box</p></figcaption>
+              </figure>
+            </div>
+            <input type="radio" name="slider" class="trigger" id="two"/>
+            <div class="slide">
+              <figure class="slide-figure">
+                <img class="slide-img" src="/images/screens/audio_transcription.png"/>
+                <figcaption class="slide-caption"><p>Audio Transcription</p></figcaption>
+              </figure>
+            </div>
+            <input type="radio" name="slider" class="trigger" id="three"/>
+            <div class="slide">
+              <figure class="slide-figure">
+                <img class="slide-img" src="/images/screens/dialogue_analysis.png"/>
+                <figcaption class="slide-caption"><p>Dialog Analysis</p></figcaption>
+              </figure>
+            </div>
+            <input type="radio" name="slider" class="trigger" id="four"/>
+            <div class="slide">
+              <figure class="slide-figure">
+                <img class="slide-img" src="/images/screens/audio_regions.png"/>
+                <figcaption class="slide-caption"><p>Audio Regions</p></figcaption>
+              </figure>
+            </div>
+            <input type="radio" name="slider" class="trigger" id="five"/>
+            <div class="slide">
+              <figure class="slide-figure">
+                <img class="slide-img" src="/images/screens/named_entity.png"/>
+                <figcaption class="slide-caption"><p>Named Entity Recognition</p></figcaption>
+              </figure>
+            </div>
+          </div>
+          <ul class="slider-nav">
+            <li class="slider-nav__item"><label class="slider-nav__label" for="zero"> </label></li>
+            <li class="slider-nav__item"><label class="slider-nav__label" for="one"> </label></li>
+            <li class="slider-nav__item"><label class="slider-nav__label" for="two"> </label></li>
+            <li class="slider-nav__item"><label class="slider-nav__label" for="three"> </label></li>
+            <li class="slider-nav__item"><label class="slider-nav__label" for="four"> </label></li>
+            <li class="slider-nav__item"><label class="slider-nav__label" for="five"> </label></li>
+          </ul>
+        </div>
+
+        <div class="quickstart">
+          <h1>Quickstart</h1>
+          <div class="code-block">
+            <p># Install the package<br><b>pip install label-studio</b></p>
+            <p># Create a new project<br><b>label-studio init my_project</b></p>
+            <p># Launch it!<br/><b>label-studio start my_project</b></p>
+          </div>
+          <p>Check out the templates configured for specific data labeling needs.</p>
+          <a href="<%- url_for("/templates/index.html") %>" class="btn" target="_blank">Templates</a>
+        </div>
+      </section>
+      <section  class="light-blue" >
+        <div style="padding-top: 50px; text-align: center">
+          <h2 style="font-size: 2em">Why Label Studio?</h2>
+        </div>
+        <div style="padding-top: 60px; display: flex; justify-content: center;">
+        <div class="cards">
+          <div class="card">
+            <h3>Configurable</h3>
+            <p>Using HTML-like tags, you can quickly configure the UI for your particular needs. It's not just an image
+              or text. It can be a pairwise comparison, multi-type classification, and beyond. Label Studio is a swiss
+              army knife of data labeling and annotation.</p>
+            <a href="<%- url_for("/guide/setup.html#Labeling-config") %>" class="btn">Learn More</a>
+          </div>
+          <div class="card">
+            <h3>Multiple data types</h3>
+            <p>Label Studio is type agnostic. The overall goal is to be able to process all data types. Right now it
+              supports <a href="<%- url_for("/tags/audio.html") %>" class="underline">Audio</a>, <a
+                href="<%- url_for("/tags/text.html") %>" class="underline">Text</a>, <a
+                href="<%- url_for("/tags/image.html") %>" class="underline">Images</a>, and <a
+                href="<%- url_for("/tags/hypertext.html") %>" class="underline">HTML</a>. <br/><br/>Each interface can
+              include a mix of the types with different workflows.</p>
+          </div>
+          <div class="card">
+            <h3>Embeddable and Extendable</h3>
+            <p>Label Studio includes a powerful embedding feature that enables you to embed entire UI in your pipeline.
+              You can extend core functionality with new visual constructs and customize it for different use cases.</p>
+            <a href="<%- url_for("/guide/frontend.html") %>" class="btn">Read More</a>
+          </div>
+        </div>
+        </div>
+      </section>
+
+      <section class="" style="padding-top: 50px;">
+        <div style="text-align: center;">
+          <h2>Compatible with your favorite framework</h2>
+          <div class="frameworks">
+            <img src="<%- url_for("/images/frameworks/pytorch_logo.png") %>" height="50" />
+            <img src="<%- url_for("/images/frameworks/tensorflow_logo.png") %>" height="60" />
+            <img src="<%- url_for("/images/frameworks/scikit_logo.png") %>" height="50" />
+            <img src="<%- url_for("/images/frameworks/keras_logo.png") %>" height="50" />
+            
+          </div>
+        </div>
+        </section>
+      
+      <section class="subscribe">
+
+        <iframe width="640" height="320" src="https://labelstudio.substack.com/embed" frameborder="0"
+                scrolling="no"></iframe>
+
+
+      </section>
+
+      <section
+        style="background-color: #1f104d; display: flex; justify-content: center; color: white; align-items: center; padding-top: 100px; padding-bottom: 100px; display: none;">
+
+        <div>
+          <h3 style="color: white;">Looking to scale?</h3>
+          <ul style="list-style-type: none;">
+            <li>— Do you have more data than you can possibly label by hand?</li>
+            <li>— Do you want to distribute the labeling to multiple annotators?</li>
+            <li>— Do you want to control the quality of the annotations?</li>
+            <li>— Do you want to include your entire team into the process to achieve greater results?</li>
+          </ul>
+
+          <p>We provide commercial offering built on top of Label Studio.</p>
+          <div>
+            <a href="" class="btn btn-orange">Check it out</a>
+          </div>
+        </div>
+        <div>
+          <img
+            src="https://uploads-ssl.webflow.com/5cb5a799cf58f5f8d19a9441/5d24d11f82791f2dd51831ae_screely-1562693910207.png"
+            alt="Quickstart" width="600">
+        </div>
+      </section>
+
+      <div class="footer">
+        <div style="display: flex; width: 100%; margin-right: 30px; max-width: 800px">
+
+          <div style="padding-top: 6px; margin-right: 30px">
+            <a href="/"><img src="<%- url_for("/images/opossum/other/opossum_looking.svg") %>" alt="label studio logo"
+                             height="100"/></a>
+          </div>
+
+          <div style="display: flex; justify-content: space-between; flex-wrap:wrap; width: 100%">
+
+            <div class="item">
+              <h2 class="no-menu">Resources</h2>
+              <div>
+              <a href="/explore/label-studio-features">Features</a><br/>
+                <a href="/guide/">Guide</a><br/>
+                <a href="/tags/">Tags</a><br/>
+                <a href="/templates/">Templates</a>
+              </div>
+            </div>
+            
+            <div class="item">
+              <h2 class="no-menu">Help</h2>
+              <div>
+                <a
+                  href="https://docs.google.com/forms/d/e/1FAIpQLSdLHZx5EeT1J350JPwnY2xLanfmvplJi6VZk65C2R4XSsRBHg/viewform?usp=sf_link">Slack</a><br/>
+                <a href="https://github.com/heartexlabs/label-studio/issues">Github Issues</a><br/>
+                <a href="mailto:hi@heartex.ai">hi@heartex.ai</a>
+              </div>
+            </div>
+
+
+            <div class="item">
+              <h2 class="no-menu">Company</h2>
+              <div>
+                <a href="https://heartex.ai/">Heartex</a><br/>
+                <a href="https://twitter.com/heartexlabs">Twitter</a><br/>
+                <a href="https://github.com/heartexlabs/label-studio">Github</a>
+              </div>
+            </div>
+
+
+          </div>
+        </div>
+        </section>
+      </div>
+    </div>
+  </div>
+</body>

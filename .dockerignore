@@ -1,0 +1,11 @@
+# Ignore everything:
+**
+
+# Except:
+!images
+!label_studio
+!scripts
+!tools
+!setup.py
+!requirements.txt
+!README.md

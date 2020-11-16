@@ -1,0 +1,43 @@
+<ul class="menu-root">
+    <li><h3 class="root"><%- type %></h3></li>
+
+  <% site.pages.find({ type: type }).sort('order').each(function (p) { %>
+    <% var fileName = p.path.replace(/^.+?\/([\w-]+)\.html/, '$1') %>
+
+<% if (type === 'guide') { %>
+      <% if (fileName === 'frontend') { %>
+          <li><h4>Advanced usage</h4></li>
+      <% } %>
+<% } %>
+
+      <% if (type === 'tags') { %>
+
+      
+      <% if (fileName === 'audio') { %>
+          <!-- <div style="margin-top: 20px; margin-right: 40px; background: url(<%- url_for("/images/wave.png") %>) repeat-x; opacity: 0.4; background-size: 20px; height: 20px;"></div> -->
+          <li><h4>Objects</h4></li>
+      <% } %>
+
+      <% if (fileName === 'brushlabels') { %>
+          <li><h4>Controls</h4></li>
+      <% } %>
+
+      <% if (fileName === 'header') { %>
+          <li><h4>Visual & Experience</h4></li>
+      <% } %>
+
+      <% } %>
+
+      <% if (type==="templates") { %>
+         <% if (fileName === '') { %>
+           <li><h4>Audio</h4></li>
+           <li><h4>Images</h4></li>
+           <li><h4>Text</h4></li>
+           <li><h4>Mix</h4></li>
+         <% } %>
+      <% } %>
+    <li>
+      <a href="<%- url_for(p.path) %>" class="sidebar-link<%- page.title === p.title ? ' current' : '' %><%- p.is_new ? ' new' : '' %>"><%- p.title %></a>
+    </li>
+    <% }) %>
+</ul>
